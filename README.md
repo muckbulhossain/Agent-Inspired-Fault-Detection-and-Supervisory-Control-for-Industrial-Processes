@@ -1,8 +1,9 @@
 # Agent-Inspired-Fault-Detection-and-Supervisory-Control-for-Industrial-Processes
 Real-time Fault Detection &amp; Supervisory Control framework for a biopharmaceutical processes. Integrates Random Forest ML and SHAP analysis for robust diagnostics. Features a Python-Simulink MQTT bridge for autonomous closed-loop control, effectively mitigating sensor noise, actuator drift.
+
 Overview
 
-Welcome to the repository for the **Agent-Inspired Fault Detection and Supervisory Control System. This project implements a real-time, data-driven fault diagnosis framework combined with an autonomous supervisory decision layer.
+Welcome to the repository for the Agent-Inspired Fault Detection and Supervisory Control System. This project implements a real-time, data-driven fault diagnosis framework combined with an autonomous supervisory decision layer.
 
 The system utilizes a Random Forest classifier (and an ensemble of agents) to detect process faults in a continuous biopharmaceutical process. It communicates with the plant simulation (Simulink) via MQTT, enabling closed-loop supervisory control to mitigate faults such as sensor noise, actuator drifts, and metabolic anomalies.
 
@@ -11,9 +12,13 @@ Repository Structure
 1. Core Scripts & Notebooks
 
  RF.ipynb: The central Jupyter Notebook containing the entire Python workflow. It allows you to:
+ 
      1st cell-Train the Random Forest models.
+     
      2nd cell-Analyze feature importance using SHAP (Explainable AI).
+     
      3rd cell-Execute the Real-Time MAS Bridge (MQTT Interface) for fault detection.
+     
      4th cell-Also detect and Simulate the control logic.
 
 
@@ -40,9 +45,14 @@ Fault Codes Reference
 The system is trained to identify the following operational modes:
 
 OM0: Normal Operation
+
 OM1 - OM3: Biological/sensor Faults (Step, ramp and Pulse)
+
 OM4: Sensor Noise (Lactose)  
+
+
 OM5 - OM7: Biological/sensor Faults (Step, ramp and Pulse)
+
 OM8: Sensor Noise (Adenine)  
 
 
@@ -51,7 +61,9 @@ Prerequisites
 
 To run the Python interface, ensure the following libraries are installed:
 
-pip install numpy pandas matplotlib seaborn scikit-learn shap joblib paho-mqtt psutil openpyxl
+bash
+
+    pip install numpy pandas matplotlib seaborn scikit-learn shap joblib paho-mqtt psutil openpyxl
 
 
 
